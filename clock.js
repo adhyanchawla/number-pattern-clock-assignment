@@ -47,18 +47,18 @@ setInterval(()=>{
 
     // console.log(hoursIST + ":" + minutesIST + ":" + secondsIST);
 
-    if(hoursIST == 23 && minutesIST == 59 && secondsIST == 59) {
+    if(minutesIST == 59 && secondsIST == 59) {
         hoursIST = (hoursIST + 1) % 24;
     }
 
-    if(secondsIST == 59 && minutesIST == 59) {
+    if(secondsIST == 59) {
         minutesIST = (minutesIST + 1) % 60;
-        hoursIST++;
     }
 
     if(secondsIST == 59) {
         secondsIST = (secondsIST + 1) % 60;
-        minutesIST++;
-    } else secondsIST++;
+    } 
+
+    secondsIST++;
 }, 1000);
 

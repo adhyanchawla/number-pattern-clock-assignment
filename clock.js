@@ -57,8 +57,6 @@ setInterval(()=>{
 
     if(secondsIST == 59) {
         secondsIST = (secondsIST + 1) % 60;
-    } 
-
-    secondsIST++;
+    } else secondsIST++;
 }, 1000);
 
